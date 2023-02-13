@@ -1,7 +1,7 @@
 ﻿
 namespace KeyConverter
 {
-    partial class Form1
+    partial class KeyConverterForm
     {
         /// <summary>
         /// 必要なデザイナー変数です。
@@ -29,7 +29,7 @@ namespace KeyConverter
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KeyConverterForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.TabPage1 = new System.Windows.Forms.TabPage();
             this.ResetButton = new System.Windows.Forms.Button();
@@ -551,7 +551,7 @@ namespace KeyConverter
             this.MenuVersion.Text = "バージョン情報(&A)...";
             this.MenuVersion.Click += new System.EventHandler(this.MenuVersion_Click);
             // 
-            // Form1
+            // KeyConverterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -561,8 +561,9 @@ namespace KeyConverter
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(398, 414);
-            this.Name = "Form1";
+            this.Name = "KeyConverterForm";
             this.Text = "3DS Key Converter";
+            this.Load += new System.EventHandler(this.KeyConverterForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.TabPage1.ResumeLayout(false);
             this.TabPage1.PerformLayout();
