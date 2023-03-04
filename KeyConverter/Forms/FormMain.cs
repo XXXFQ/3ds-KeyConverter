@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace KeyConverter
+namespace KeyConverter.Forms
 {
-    public partial class KeyConverterForm : Form
+    public partial class FormMain : Form
     {
         // ツール情報
         const string GAME_NAME = "3DS KeyConverter";
-        const string VERSION = "v1.0.1";
+        const string VERSION = "v1.0.2";
         const string AUTHOR = "アーム";
         const string TWITTER_ID = "@40414";
 
         // キーボックスの数
-        public const int KEY_CHEAK_BOX_LENGTH = 23;
+        const int KEY_CHEAK_BOX_LENGTH = 23;
 
-        public KeyConverterForm()
+        public FormMain()
         {
             InitializeComponent();
         }
@@ -27,7 +27,7 @@ namespace KeyConverter
         private void KeyConverterForm_Load(object sender, EventArgs e)
         {
             for (int i = 1; i <= KEY_CHEAK_BOX_LENGTH; i++) {
-                CheckBox keyCheckBox = (CheckBox)TabPage1.Controls["KeyCheckBox" + i];
+                CheckBox keyCheckBox = (CheckBox)TabPage1.Controls[$"KeyCheckBox{i}"];
                 keyCheckBox.CheckedChanged += KeyCheckBoxs_Cheaked;
             }
         }
@@ -35,7 +35,7 @@ namespace KeyConverter
         private void MenuVersion_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-                GAME_NAME + " " + VERSION + "\n\n© 2022 " + AUTHOR + "<Twitter:" + TWITTER_ID + ">",
+                $"{GAME_NAME} {VERSION}\n\n© 2022 {AUTHOR}<Twitter:{TWITTER_ID}>",
                 "バージョン情報",
                 MessageBoxButtons.OK);
         }
@@ -64,7 +64,7 @@ namespace KeyConverter
         {
             int keyValue = 0;
             for (int bit = 0; bit < KEY_CHEAK_BOX_LENGTH; bit++) {
-                CheckBox keyCheckBox = (CheckBox)TabPage1.Controls["KeyCheckBox" + (bit + 1)];
+                CheckBox keyCheckBox = (CheckBox)TabPage1.Controls[$"KeyCheckBox{bit + 1}"];
                 if (keyCheckBox.Checked) {
                     if (bit <= 11) {
                         keyValue += 1 << bit;
@@ -82,7 +82,7 @@ namespace KeyConverter
                     }
                 }
             }
-            KeyText.Text = "DD000000 " + keyValue.ToString("X8");
+            KeyText.Text = $"DD000000 {keyValue:X8}";
         }
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace KeyConverter
         private void ResetButton_Click(object sender, EventArgs e)
         {
             for (int i = 1; i <= KEY_CHEAK_BOX_LENGTH; i++) {
-                CheckBox keyCheckBox = (CheckBox)TabPage1.Controls["KeyCheckBox" + i];
+                CheckBox keyCheckBox = (CheckBox)TabPage1.Controls[$"KeyCheckBox{i}"];
                 keyCheckBox.Checked = false;
             }
             KeyText.Text = "DD000000 00000000";
@@ -110,7 +110,7 @@ namespace KeyConverter
         /// </summary>
         private void KeyText_Re_TextChanged(object sender, EventArgs e)
         {
-            ConvertButton_Re.Enabled = KeyText_Re.Text != "" ? true : false;
+            ConvertButton_Re.Enabled = KeyText_Re.Text != "";
         }
 
         /// <summary>
@@ -130,10 +130,11 @@ namespace KeyConverter
             string keyText = "";
 
             for (int bit = 0; bit < KEY_CHEAK_BOX_LENGTH; bit++) {
+
                 // 指定されたキーを確認
                 if (Convert.ToBoolean(keyValue & 1)) {
-                    CheckBox keyCheckBox = (CheckBox)TabPage1.Controls["KeyCheckBox" + (bit + 1)];
-                    keyText += "(" + keyCheckBox.Text + ") + ";
+                    CheckBox keyCheckBox = (CheckBox)TabPage1.Controls[$"KeyCheckBox{bit + 1}"];
+                    keyText += $"({keyCheckBox.Text}) + ";
                 }
 
                 switch (bit) {
@@ -151,7 +152,7 @@ namespace KeyConverter
                         break;
                 }
 
-                if (!Convert.ToBoolean(keyValue)) { break; }
+                if (!Convert.ToBoolean(keyValue)) break;
             }
 
             // 結果を出力

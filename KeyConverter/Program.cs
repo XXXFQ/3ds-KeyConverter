@@ -16,7 +16,7 @@ namespace KeyConverter
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new KeyConverterForm());
+            Application.Run(new Forms.FormMain());
         }
     }
 }

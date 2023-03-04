@@ -1,7 +1,7 @@
 ﻿
-namespace KeyConverter
+namespace KeyConverter.Forms
 {
-    partial class KeyConverterForm
+    partial class FormMain
     {
         /// <summary>
         /// 必要なデザイナー変数です。
@@ -29,7 +29,7 @@ namespace KeyConverter
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KeyConverterForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.TabPage1 = new System.Windows.Forms.TabPage();
             this.ResetButton = new System.Windows.Forms.Button();
@@ -78,6 +78,9 @@ namespace KeyConverter
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.TabPage1);
             this.tabControl1.Controls.Add(this.TabPage2);
             this.tabControl1.Location = new System.Drawing.Point(12, 27);
@@ -125,6 +128,7 @@ namespace KeyConverter
             // 
             // ResetButton
             // 
+            this.ResetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ResetButton.Location = new System.Drawing.Point(185, 44);
             this.ResetButton.Name = "ResetButton";
             this.ResetButton.Size = new System.Drawing.Size(64, 25);
@@ -145,6 +149,7 @@ namespace KeyConverter
             // 
             // KeyCheckBox19
             // 
+            this.KeyCheckBox19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.KeyCheckBox19.AutoSize = true;
             this.KeyCheckBox19.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
             this.KeyCheckBox19.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -157,6 +162,7 @@ namespace KeyConverter
             // 
             // KeyCheckBox17
             // 
+            this.KeyCheckBox17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.KeyCheckBox17.AutoSize = true;
             this.KeyCheckBox17.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.KeyCheckBox17.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -169,6 +175,7 @@ namespace KeyConverter
             // 
             // KeyCheckBox16
             // 
+            this.KeyCheckBox16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.KeyCheckBox16.AutoSize = true;
             this.KeyCheckBox16.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox16.Location = new System.Drawing.Point(248, 124);
@@ -180,6 +187,7 @@ namespace KeyConverter
             // 
             // KeyCheckBox18
             // 
+            this.KeyCheckBox18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.KeyCheckBox18.AutoSize = true;
             this.KeyCheckBox18.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.KeyCheckBox18.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -204,6 +212,7 @@ namespace KeyConverter
             // 
             // KeyCheckBox9
             // 
+            this.KeyCheckBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.KeyCheckBox9.AutoSize = true;
             this.KeyCheckBox9.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.KeyCheckBox9.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -228,6 +237,7 @@ namespace KeyConverter
             // 
             // KeyCheckBox14
             // 
+            this.KeyCheckBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.KeyCheckBox14.AutoSize = true;
             this.KeyCheckBox14.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.KeyCheckBox14.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -240,6 +250,8 @@ namespace KeyConverter
             // 
             // KeyCheckBox15
             // 
+            this.KeyCheckBox15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.KeyCheckBox15.AutoSize = true;
             this.KeyCheckBox15.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox15.Location = new System.Drawing.Point(126, 210);
@@ -251,6 +263,7 @@ namespace KeyConverter
             // 
             // KeyCheckBox4
             // 
+            this.KeyCheckBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.KeyCheckBox4.AutoSize = true;
             this.KeyCheckBox4.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox4.Location = new System.Drawing.Point(271, 261);
@@ -262,6 +275,7 @@ namespace KeyConverter
             // 
             // KeyCheckBox3
             // 
+            this.KeyCheckBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.KeyCheckBox3.AutoSize = true;
             this.KeyCheckBox3.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox3.Location = new System.Drawing.Point(271, 287);
@@ -273,6 +287,7 @@ namespace KeyConverter
             // 
             // KeyCheckBox2
             // 
+            this.KeyCheckBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.KeyCheckBox2.AutoSize = true;
             this.KeyCheckBox2.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
             this.KeyCheckBox2.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -285,6 +300,7 @@ namespace KeyConverter
             // 
             // KeyCheckBox12
             // 
+            this.KeyCheckBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.KeyCheckBox12.AutoSize = true;
             this.KeyCheckBox12.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.KeyCheckBox12.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -297,6 +313,7 @@ namespace KeyConverter
             // 
             // KeyCheckBox1
             // 
+            this.KeyCheckBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.KeyCheckBox1.AutoSize = true;
             this.KeyCheckBox1.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox1.Location = new System.Drawing.Point(309, 187);
@@ -308,6 +325,7 @@ namespace KeyConverter
             // 
             // KeyCheckBox11
             // 
+            this.KeyCheckBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.KeyCheckBox11.AutoSize = true;
             this.KeyCheckBox11.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.KeyCheckBox11.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -414,6 +432,8 @@ namespace KeyConverter
             // 
             // KeyText
             // 
+            this.KeyText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.KeyText.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyText.Location = new System.Drawing.Point(99, 11);
             this.KeyText.Name = "KeyText";
@@ -558,8 +578,10 @@ namespace KeyConverter
             this.ClientSize = new System.Drawing.Size(382, 375);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(398, 414);
             this.Name = "KeyConverterForm";
             this.Text = "3DS Key Converter";
