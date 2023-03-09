@@ -32,8 +32,8 @@ namespace KeyConverter.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.TabPage1 = new System.Windows.Forms.TabPage();
-            this.ResetButton = new System.Windows.Forms.Button();
-            this.CopyButton = new System.Windows.Forms.Button();
+            this.Btn_Reset = new System.Windows.Forms.Button();
+            this.Btn_Copy = new System.Windows.Forms.Button();
             this.KeyCheckBox19 = new System.Windows.Forms.CheckBox();
             this.KeyCheckBox17 = new System.Windows.Forms.CheckBox();
             this.KeyCheckBox16 = new System.Windows.Forms.CheckBox();
@@ -57,19 +57,19 @@ namespace KeyConverter.Forms
             this.KeyCheckBox21 = new System.Windows.Forms.CheckBox();
             this.KeyCheckBox20 = new System.Windows.Forms.CheckBox();
             this.KeyCheckBox22 = new System.Windows.Forms.CheckBox();
-            this.KeyText = new System.Windows.Forms.TextBox();
+            this.Txt_KeyCodeBox = new System.Windows.Forms.TextBox();
             this.TabPage2 = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
-            this.Output_KeyText_Re = new System.Windows.Forms.TextBox();
-            this.ResetButton_Re = new System.Windows.Forms.Button();
-            this.ConvertButton_Re = new System.Windows.Forms.Button();
+            this.Txt_OutputKey_Re = new System.Windows.Forms.TextBox();
+            this.Btn_Reset_Re = new System.Windows.Forms.Button();
+            this.Btn_Convert_Re = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.KeyText_Re = new System.Windows.Forms.TextBox();
+            this.Txt_Key_Re = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.MenuFileEdit = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuFinish = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuHelpEdit = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuVersion = new System.Windows.Forms.ToolStripMenuItem();
+            this.Tsmi_File = new System.Windows.Forms.ToolStripMenuItem();
+            this.Tsmi_Exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.Tsmi_Help = new System.Windows.Forms.ToolStripMenuItem();
+            this.Tsmi_Version = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.TabPage1.SuspendLayout();
             this.TabPage2.SuspendLayout();
@@ -78,8 +78,8 @@ namespace KeyConverter.Forms
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.TabPage1);
             this.tabControl1.Controls.Add(this.TabPage2);
@@ -92,8 +92,8 @@ namespace KeyConverter.Forms
             // TabPage1
             // 
             this.TabPage1.BackColor = System.Drawing.Color.Transparent;
-            this.TabPage1.Controls.Add(this.ResetButton);
-            this.TabPage1.Controls.Add(this.CopyButton);
+            this.TabPage1.Controls.Add(this.Btn_Reset);
+            this.TabPage1.Controls.Add(this.Btn_Copy);
             this.TabPage1.Controls.Add(this.KeyCheckBox19);
             this.TabPage1.Controls.Add(this.KeyCheckBox17);
             this.TabPage1.Controls.Add(this.KeyCheckBox16);
@@ -117,7 +117,7 @@ namespace KeyConverter.Forms
             this.TabPage1.Controls.Add(this.KeyCheckBox21);
             this.TabPage1.Controls.Add(this.KeyCheckBox20);
             this.TabPage1.Controls.Add(this.KeyCheckBox22);
-            this.TabPage1.Controls.Add(this.KeyText);
+            this.TabPage1.Controls.Add(this.Txt_KeyCodeBox);
             this.TabPage1.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.TabPage1.Location = new System.Drawing.Point(4, 22);
             this.TabPage1.Name = "TabPage1";
@@ -126,26 +126,26 @@ namespace KeyConverter.Forms
             this.TabPage1.TabIndex = 0;
             this.TabPage1.Text = "変換";
             // 
-            // ResetButton
+            // Btn_Reset
             // 
-            this.ResetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ResetButton.Location = new System.Drawing.Point(185, 44);
-            this.ResetButton.Name = "ResetButton";
-            this.ResetButton.Size = new System.Drawing.Size(64, 25);
-            this.ResetButton.TabIndex = 26;
-            this.ResetButton.Text = "Reset";
-            this.ResetButton.UseVisualStyleBackColor = true;
-            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
+            this.Btn_Reset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Reset.Location = new System.Drawing.Point(185, 44);
+            this.Btn_Reset.Name = "Btn_Reset";
+            this.Btn_Reset.Size = new System.Drawing.Size(64, 25);
+            this.Btn_Reset.TabIndex = 26;
+            this.Btn_Reset.Text = "Reset";
+            this.Btn_Reset.UseVisualStyleBackColor = true;
+            this.Btn_Reset.Click += new System.EventHandler(this.ResetButton_Click);
             // 
-            // CopyButton
+            // Btn_Copy
             // 
-            this.CopyButton.Location = new System.Drawing.Point(99, 44);
-            this.CopyButton.Name = "CopyButton";
-            this.CopyButton.Size = new System.Drawing.Size(64, 25);
-            this.CopyButton.TabIndex = 25;
-            this.CopyButton.Text = "Copy";
-            this.CopyButton.UseVisualStyleBackColor = true;
-            this.CopyButton.Click += new System.EventHandler(this.CopyButton_Click);
+            this.Btn_Copy.Location = new System.Drawing.Point(99, 44);
+            this.Btn_Copy.Name = "Btn_Copy";
+            this.Btn_Copy.Size = new System.Drawing.Size(64, 25);
+            this.Btn_Copy.TabIndex = 25;
+            this.Btn_Copy.Text = "Copy";
+            this.Btn_Copy.UseVisualStyleBackColor = true;
+            this.Btn_Copy.Click += new System.EventHandler(this.CopyButton_Click);
             // 
             // KeyCheckBox19
             // 
@@ -250,7 +250,7 @@ namespace KeyConverter.Forms
             // 
             // KeyCheckBox15
             // 
-            this.KeyCheckBox15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.KeyCheckBox15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.KeyCheckBox15.AutoSize = true;
             this.KeyCheckBox15.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -430,28 +430,28 @@ namespace KeyConverter.Forms
             this.KeyCheckBox22.Text = "C↑";
             this.KeyCheckBox22.UseVisualStyleBackColor = true;
             // 
-            // KeyText
+            // Txt_KeyCodeBox
             // 
-            this.KeyText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.Txt_KeyCodeBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.KeyText.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.KeyText.Location = new System.Drawing.Point(99, 11);
-            this.KeyText.Name = "KeyText";
-            this.KeyText.ReadOnly = true;
-            this.KeyText.Size = new System.Drawing.Size(150, 27);
-            this.KeyText.TabIndex = 0;
-            this.KeyText.Text = "DD000000 00000000";
-            this.KeyText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Txt_KeyCodeBox.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Txt_KeyCodeBox.Location = new System.Drawing.Point(99, 11);
+            this.Txt_KeyCodeBox.Name = "Txt_KeyCodeBox";
+            this.Txt_KeyCodeBox.ReadOnly = true;
+            this.Txt_KeyCodeBox.Size = new System.Drawing.Size(150, 27);
+            this.Txt_KeyCodeBox.TabIndex = 0;
+            this.Txt_KeyCodeBox.Text = "DD000000 00000000";
+            this.Txt_KeyCodeBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TabPage2
             // 
             this.TabPage2.BackColor = System.Drawing.Color.Transparent;
             this.TabPage2.Controls.Add(this.label2);
-            this.TabPage2.Controls.Add(this.Output_KeyText_Re);
-            this.TabPage2.Controls.Add(this.ResetButton_Re);
-            this.TabPage2.Controls.Add(this.ConvertButton_Re);
+            this.TabPage2.Controls.Add(this.Txt_OutputKey_Re);
+            this.TabPage2.Controls.Add(this.Btn_Reset_Re);
+            this.TabPage2.Controls.Add(this.Btn_Convert_Re);
             this.TabPage2.Controls.Add(this.label1);
-            this.TabPage2.Controls.Add(this.KeyText_Re);
+            this.TabPage2.Controls.Add(this.Txt_Key_Re);
             this.TabPage2.Location = new System.Drawing.Point(4, 22);
             this.TabPage2.Name = "TabPage2";
             this.TabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -469,37 +469,37 @@ namespace KeyConverter.Forms
             this.label2.TabIndex = 30;
             this.label2.Text = "出力結果";
             // 
-            // Output_KeyText_Re
+            // Txt_OutputKey_Re
             // 
-            this.Output_KeyText_Re.Font = new System.Drawing.Font("游明朝", 15F);
-            this.Output_KeyText_Re.Location = new System.Drawing.Point(6, 124);
-            this.Output_KeyText_Re.Multiline = true;
-            this.Output_KeyText_Re.Name = "Output_KeyText_Re";
-            this.Output_KeyText_Re.ReadOnly = true;
-            this.Output_KeyText_Re.Size = new System.Drawing.Size(341, 183);
-            this.Output_KeyText_Re.TabIndex = 29;
+            this.Txt_OutputKey_Re.Font = new System.Drawing.Font("游明朝", 15F);
+            this.Txt_OutputKey_Re.Location = new System.Drawing.Point(6, 124);
+            this.Txt_OutputKey_Re.Multiline = true;
+            this.Txt_OutputKey_Re.Name = "Txt_OutputKey_Re";
+            this.Txt_OutputKey_Re.ReadOnly = true;
+            this.Txt_OutputKey_Re.Size = new System.Drawing.Size(341, 183);
+            this.Txt_OutputKey_Re.TabIndex = 29;
             // 
-            // ResetButton_Re
+            // Btn_Reset_Re
             // 
-            this.ResetButton_Re.Font = new System.Drawing.Font("游明朝", 9F);
-            this.ResetButton_Re.Location = new System.Drawing.Point(185, 44);
-            this.ResetButton_Re.Name = "ResetButton_Re";
-            this.ResetButton_Re.Size = new System.Drawing.Size(64, 25);
-            this.ResetButton_Re.TabIndex = 28;
-            this.ResetButton_Re.Text = "Reset";
-            this.ResetButton_Re.UseVisualStyleBackColor = true;
-            this.ResetButton_Re.Click += new System.EventHandler(this.ResetButton_Re_Click);
+            this.Btn_Reset_Re.Font = new System.Drawing.Font("游明朝", 9F);
+            this.Btn_Reset_Re.Location = new System.Drawing.Point(185, 44);
+            this.Btn_Reset_Re.Name = "Btn_Reset_Re";
+            this.Btn_Reset_Re.Size = new System.Drawing.Size(64, 25);
+            this.Btn_Reset_Re.TabIndex = 28;
+            this.Btn_Reset_Re.Text = "Reset";
+            this.Btn_Reset_Re.UseVisualStyleBackColor = true;
+            this.Btn_Reset_Re.Click += new System.EventHandler(this.ResetButton_Re_Click);
             // 
-            // ConvertButton_Re
+            // Btn_Convert_Re
             // 
-            this.ConvertButton_Re.Font = new System.Drawing.Font("游明朝", 9F);
-            this.ConvertButton_Re.Location = new System.Drawing.Point(99, 44);
-            this.ConvertButton_Re.Name = "ConvertButton_Re";
-            this.ConvertButton_Re.Size = new System.Drawing.Size(64, 25);
-            this.ConvertButton_Re.TabIndex = 27;
-            this.ConvertButton_Re.Text = "Convert";
-            this.ConvertButton_Re.UseVisualStyleBackColor = true;
-            this.ConvertButton_Re.Click += new System.EventHandler(this.ConvertButton_Re_Click);
+            this.Btn_Convert_Re.Font = new System.Drawing.Font("游明朝", 9F);
+            this.Btn_Convert_Re.Location = new System.Drawing.Point(99, 44);
+            this.Btn_Convert_Re.Name = "Btn_Convert_Re";
+            this.Btn_Convert_Re.Size = new System.Drawing.Size(64, 25);
+            this.Btn_Convert_Re.TabIndex = 27;
+            this.Btn_Convert_Re.Text = "Convert";
+            this.Btn_Convert_Re.UseVisualStyleBackColor = true;
+            this.Btn_Convert_Re.Click += new System.EventHandler(this.ConvertButton_Re_Click);
             // 
             // label1
             // 
@@ -511,67 +511,67 @@ namespace KeyConverter.Forms
             this.label1.TabIndex = 2;
             this.label1.Text = "キーコードを入力 : ";
             // 
-            // KeyText_Re
+            // Txt_Key_Re
             // 
-            this.KeyText_Re.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.KeyText_Re.Location = new System.Drawing.Point(163, 11);
-            this.KeyText_Re.MaxLength = 8;
-            this.KeyText_Re.Name = "KeyText_Re";
-            this.KeyText_Re.Size = new System.Drawing.Size(72, 27);
-            this.KeyText_Re.TabIndex = 1;
-            this.KeyText_Re.Text = "00000000";
-            this.KeyText_Re.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.KeyText_Re.TextChanged += new System.EventHandler(this.KeyText_Re_TextChanged);
+            this.Txt_Key_Re.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Txt_Key_Re.Location = new System.Drawing.Point(163, 11);
+            this.Txt_Key_Re.MaxLength = 8;
+            this.Txt_Key_Re.Name = "Txt_Key_Re";
+            this.Txt_Key_Re.Size = new System.Drawing.Size(72, 27);
+            this.Txt_Key_Re.TabIndex = 1;
+            this.Txt_Key_Re.Text = "00000000";
+            this.Txt_Key_Re.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Txt_Key_Re.TextChanged += new System.EventHandler(this.KeyText_Re_TextChanged);
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuFileEdit,
-            this.MenuHelpEdit});
+            this.Tsmi_File,
+            this.Tsmi_Help});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(382, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // MenuFileEdit
+            // Tsmi_File
             // 
-            this.MenuFileEdit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuFinish});
-            this.MenuFileEdit.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
-            this.MenuFileEdit.Name = "MenuFileEdit";
-            this.MenuFileEdit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F)));
-            this.MenuFileEdit.Size = new System.Drawing.Size(67, 20);
-            this.MenuFileEdit.Text = "ファイル(&F)";
+            this.Tsmi_File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Tsmi_Exit});
+            this.Tsmi_File.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
+            this.Tsmi_File.Name = "Tsmi_File";
+            this.Tsmi_File.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F)));
+            this.Tsmi_File.Size = new System.Drawing.Size(67, 20);
+            this.Tsmi_File.Text = "ファイル(&F)";
             // 
-            // MenuFinish
+            // Tsmi_Exit
             // 
-            this.MenuFinish.Name = "MenuFinish";
-            this.MenuFinish.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.MenuFinish.ShowShortcutKeys = false;
-            this.MenuFinish.Size = new System.Drawing.Size(106, 22);
-            this.MenuFinish.Text = "終了(&X)";
-            this.MenuFinish.Click += new System.EventHandler(this.MenuFinish_Click);
+            this.Tsmi_Exit.Name = "Tsmi_Exit";
+            this.Tsmi_Exit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.Tsmi_Exit.ShowShortcutKeys = false;
+            this.Tsmi_Exit.Size = new System.Drawing.Size(180, 22);
+            this.Tsmi_Exit.Text = "終了(&X)";
+            this.Tsmi_Exit.Click += new System.EventHandler(this.Tsmi_Exit_Click);
             // 
-            // MenuHelpEdit
+            // Tsmi_Help
             // 
-            this.MenuHelpEdit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuVersion});
-            this.MenuHelpEdit.Name = "MenuHelpEdit";
-            this.MenuHelpEdit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.H)));
-            this.MenuHelpEdit.Size = new System.Drawing.Size(65, 20);
-            this.MenuHelpEdit.Text = "ヘルプ(&H)";
+            this.Tsmi_Help.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Tsmi_Version});
+            this.Tsmi_Help.Name = "Tsmi_Help";
+            this.Tsmi_Help.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.H)));
+            this.Tsmi_Help.Size = new System.Drawing.Size(65, 20);
+            this.Tsmi_Help.Text = "ヘルプ(&H)";
             // 
-            // MenuVersion
+            // Tsmi_Version
             // 
-            this.MenuVersion.Name = "MenuVersion";
-            this.MenuVersion.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.MenuVersion.ShowShortcutKeys = false;
-            this.MenuVersion.Size = new System.Drawing.Size(160, 22);
-            this.MenuVersion.Text = "バージョン情報(&A)...";
-            this.MenuVersion.Click += new System.EventHandler(this.MenuVersion_Click);
+            this.Tsmi_Version.Name = "Tsmi_Version";
+            this.Tsmi_Version.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.Tsmi_Version.ShowShortcutKeys = false;
+            this.Tsmi_Version.Size = new System.Drawing.Size(180, 22);
+            this.Tsmi_Version.Text = "バージョン情報(&A)...";
+            this.Tsmi_Version.Click += new System.EventHandler(this.Tsmi_Version_Click);
             // 
-            // KeyConverterForm
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -583,9 +583,9 @@ namespace KeyConverter.Forms
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(398, 414);
-            this.Name = "KeyConverterForm";
+            this.Name = "FormMain";
             this.Text = "3DS Key Converter";
-            this.Load += new System.EventHandler(this.KeyConverterForm_Load);
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.tabControl1.ResumeLayout(false);
             this.TabPage1.ResumeLayout(false);
             this.TabPage1.PerformLayout();
@@ -603,7 +603,7 @@ namespace KeyConverter.Forms
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage TabPage1;
         private System.Windows.Forms.CheckBox KeyCheckBox22;
-        private System.Windows.Forms.TextBox KeyText;
+        private System.Windows.Forms.TextBox Txt_KeyCodeBox;
         private System.Windows.Forms.TabPage TabPage2;
         private System.Windows.Forms.CheckBox KeyCheckBox23;
         private System.Windows.Forms.CheckBox KeyCheckBox21;
@@ -627,19 +627,19 @@ namespace KeyConverter.Forms
         private System.Windows.Forms.CheckBox KeyCheckBox9;
         private System.Windows.Forms.CheckBox KeyCheckBox13;
         private System.Windows.Forms.CheckBox KeyCheckBox14;
-        private System.Windows.Forms.Button ResetButton;
-        private System.Windows.Forms.Button CopyButton;
-        private System.Windows.Forms.Button ResetButton_Re;
-        private System.Windows.Forms.Button ConvertButton_Re;
+        private System.Windows.Forms.Button Btn_Reset;
+        private System.Windows.Forms.Button Btn_Copy;
+        private System.Windows.Forms.Button Btn_Reset_Re;
+        private System.Windows.Forms.Button Btn_Convert_Re;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox KeyText_Re;
-        private System.Windows.Forms.TextBox Output_KeyText_Re;
+        private System.Windows.Forms.TextBox Txt_Key_Re;
+        private System.Windows.Forms.TextBox Txt_OutputKey_Re;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem MenuFileEdit;
-        private System.Windows.Forms.ToolStripMenuItem MenuFinish;
-        private System.Windows.Forms.ToolStripMenuItem MenuHelpEdit;
-        private System.Windows.Forms.ToolStripMenuItem MenuVersion;
+        private System.Windows.Forms.ToolStripMenuItem Tsmi_File;
+        private System.Windows.Forms.ToolStripMenuItem Tsmi_Exit;
+        private System.Windows.Forms.ToolStripMenuItem Tsmi_Help;
+        private System.Windows.Forms.ToolStripMenuItem Tsmi_Version;
     }
 }
 

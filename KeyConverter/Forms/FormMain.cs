@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Windows.Forms;
 
+using KeyConverter.Properties;
+using KeyConverter.Utils;
+
 namespace KeyConverter.Forms
 {
     public partial class FormMain : Form
     {
-        // ツール情報
-        const string GAME_NAME = "3DS KeyConverter";
-        const string VERSION = "v1.0.2";
-        const string AUTHOR = "アーム";
-        const string TWITTER_ID = "@40414";
-
         // キーボックスの数
         const int KEY_CHEAK_BOX_LENGTH = 23;
 
@@ -19,42 +16,55 @@ namespace KeyConverter.Forms
             InitializeComponent();
         }
 
-        private void MenuFinish_Click(object sender, EventArgs e)
+        /// <summary>
+        /// フォームがロードされた時
+        /// </summary>
+        private void FormMain_Load(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
+            Txt_KeyCodeBox.Tag = 0;
 
-        private void KeyConverterForm_Load(object sender, EventArgs e)
-        {
-            for (int i = 1; i <= KEY_CHEAK_BOX_LENGTH; i++) {
-                CheckBox keyCheckBox = (CheckBox)TabPage1.Controls[$"KeyCheckBox{i}"];
+            for (int bit = 0; bit < KEY_CHEAK_BOX_LENGTH; bit++)
+            {
+                CheckBox keyCheckBox = (CheckBox)TabPage1.Controls[$"KeyCheckBox{bit + 1}"];
                 keyCheckBox.CheckedChanged += KeyCheckBoxs_Cheaked;
-            }
-        }
 
-        private void MenuVersion_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(
-                $"{GAME_NAME} {VERSION}\n\n© 2022 {AUTHOR}<Twitter:{TWITTER_ID}>",
-                "バージョン情報",
-                MessageBoxButtons.OK);
+                if (bit <= 11) {
+                    keyCheckBox.Tag = 1 << bit;
+                }
+                // keyが"ZL"か"ZR"だった場合
+                else if (12 <= bit && bit <= 13) {
+                    keyCheckBox.Tag = 1 << (bit + 2);
+                }
+                // keyが"Touch Screen"だった場合
+                else if (bit == 14) {
+                    keyCheckBox.Tag = 1 << (bit + 6);
+                }
+                else {
+                    keyCheckBox.Tag = 1 << (bit + 9);
+                }
+            }
         }
 
         /// <summary>
-        /// 16進文字列か判定する
+        /// ツールのバージョン情報を表示
         /// </summary>
-        /// <returns>16進文字列の場合trueを返す。そうでない場合はfalseを返す。</returns>
-        public bool IsHexString(string str)
+        private void Tsmi_Version_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(str)) {
-                return false;
-            }
-            foreach (char c in str) {
-                if (!Uri.IsHexDigit(c)) {
-                    return false;
-                }
-            }
-            return true;
+            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            var assemblyName = assembly.GetName();
+            var fileVersionInfo = System.Diagnostics.FileVersionInfo.GetVersionInfo(assembly.Location);
+            var title = fileVersionInfo.FileDescription;
+
+            string message = $"{title} v{assemblyName.Version.ToString(3)}\n{fileVersionInfo.LegalCopyright}";
+            MessageBox.Show(message, Resources.VersionInfo, MessageBoxButtons.OK);
+        }
+
+        /// <summary>
+        /// ツールの終了処理
+        /// </summary>
+        private void Tsmi_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         /// <summary>
@@ -62,27 +72,16 @@ namespace KeyConverter.Forms
         /// </summary>
         private void KeyCheckBoxs_Cheaked(object sender, EventArgs e)
         {
-            int keyValue = 0;
-            for (int bit = 0; bit < KEY_CHEAK_BOX_LENGTH; bit++) {
-                CheckBox keyCheckBox = (CheckBox)TabPage1.Controls[$"KeyCheckBox{bit + 1}"];
-                if (keyCheckBox.Checked) {
-                    if (bit <= 11) {
-                        keyValue += 1 << bit;
-                    }
-                    // keyが"ZL"か"ZR"だった場合
-                    else if (12 <= bit && bit <= 13) {
-                        keyValue += 1 << (bit + 2);
-                    }
-                    // keyが"Touch Screen"だった場合
-                    else if (bit == 14) {
-                        keyValue += 1 << (bit + 6);
-                    }
-                    else{
-                        keyValue += 1 << (bit + 9);
-                    }
-                }
-            }
-            KeyText.Text = $"DD000000 {keyValue:X8}";
+            CheckBox Chk_Key = (CheckBox)sender;
+            int keyValue = Convert.ToInt32(Chk_Key.Tag);
+            int keyCode = Convert.ToInt32(Txt_KeyCodeBox.Tag);
+
+            // キーコードの計算
+            keyCode += Chk_Key.Checked ? keyValue : -keyValue;
+
+            // キーボックスを更新
+            Txt_KeyCodeBox.Text = $"DD000000 {keyCode:X8}";
+            Txt_KeyCodeBox.Tag = keyCode;
         }
 
         /// <summary>
@@ -90,7 +89,7 @@ namespace KeyConverter.Forms
         /// </summary>
         private void CopyButton_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(KeyText.Text);
+            Clipboard.SetText(Txt_KeyCodeBox.Text);
         }
 
         /// <summary>
@@ -102,7 +101,8 @@ namespace KeyConverter.Forms
                 CheckBox keyCheckBox = (CheckBox)TabPage1.Controls[$"KeyCheckBox{i}"];
                 keyCheckBox.Checked = false;
             }
-            KeyText.Text = "DD000000 00000000";
+            Txt_KeyCodeBox.Text = "DD000000 00000000";
+            Txt_KeyCodeBox.Tag = 0;
         }
 
         /// <summary>
@@ -110,7 +110,7 @@ namespace KeyConverter.Forms
         /// </summary>
         private void KeyText_Re_TextChanged(object sender, EventArgs e)
         {
-            ConvertButton_Re.Enabled = KeyText_Re.Text != "";
+            Btn_Convert_Re.Enabled = Txt_Key_Re.Text != "";
         }
 
         /// <summary>
@@ -119,18 +119,16 @@ namespace KeyConverter.Forms
         private void ConvertButton_Re_Click(object sender, EventArgs e)
         {
             // 正しいキーの値か確認
-            if (!IsHexString(KeyText_Re.Text)) {
-                MessageBox.Show(
-                    "16進数を入力してください。", "エラー",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error
-                );
+            if (!StringExtensions.IsHexString(Txt_Key_Re.Text))
+            {
+                MessageBox.Show(Resources.EnterHexNumber, Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            int keyValue = Convert.ToInt32(KeyText_Re.Text, 16);
+            int keyValue = Convert.ToInt32(Txt_Key_Re.Text, 16);
             string keyText = "";
 
-            for (int bit = 0; bit < KEY_CHEAK_BOX_LENGTH; bit++) {
-
+            for (int bit = 0; bit < KEY_CHEAK_BOX_LENGTH; bit++)
+            {
                 // 指定されたキーを確認
                 if (Convert.ToBoolean(keyValue & 1)) {
                     CheckBox keyCheckBox = (CheckBox)TabPage1.Controls[$"KeyCheckBox{bit + 1}"];
@@ -157,7 +155,7 @@ namespace KeyConverter.Forms
 
             // 結果を出力
             if (keyText != "") {
-                Output_KeyText_Re.Text = keyText.Remove(keyText.Length - 3);
+                Txt_OutputKey_Re.Text = keyText.Remove(keyText.Length - 3);
             }
         }
 
@@ -166,8 +164,8 @@ namespace KeyConverter.Forms
         /// </summary>
         private void ResetButton_Re_Click(object sender, EventArgs e)
         {
-            KeyText_Re.Text = "00000000";
-            Output_KeyText_Re.Text = "";
+            Txt_Key_Re.Text = "00000000";
+            Txt_OutputKey_Re.Text = "";
         }
     }
 }
