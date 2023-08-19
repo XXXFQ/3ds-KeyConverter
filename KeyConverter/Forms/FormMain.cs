@@ -21,18 +21,20 @@ namespace KeyConverter.Forms
         /// </summary>
         private void FormMain_Load(object sender, EventArgs e)
         {
-            Txt_KeyCodeBox.Tag = 0;
+            Txt_KeyCodeResultBox.Tag = 0;
 
             for (int bit = 0; bit < KEY_CHEAK_BOX_LENGTH; bit++)
             {
                 CheckBox keyCheckBox = (CheckBox)TabPage1.Controls[$"KeyCheckBox{bit + 1}"];
                 keyCheckBox.CheckedChanged += KeyCheckBoxs_Cheaked;
 
-                if (bit <= 11) {
+                if (bit <= 11)
+                {
                     keyCheckBox.Tag = 1 << bit;
                 }
                 // keyが"ZL"か"ZR"だった場合
-                else if (12 <= bit && bit <= 13) {
+                else if (12 <= bit && bit <= 13)
+                {
                     keyCheckBox.Tag = 1 << (bit + 2);
                 }
                 // keyが"Touch Screen"だった場合
@@ -74,14 +76,14 @@ namespace KeyConverter.Forms
         {
             CheckBox Chk_Key = (CheckBox)sender;
             int keyValue = Convert.ToInt32(Chk_Key.Tag);
-            int keyCode = Convert.ToInt32(Txt_KeyCodeBox.Tag);
+            int keyCode = Convert.ToInt32(Txt_KeyCodeResultBox.Tag);
 
             // キーコードの計算
             keyCode += Chk_Key.Checked ? keyValue : -keyValue;
 
             // キーボックスを更新
-            Txt_KeyCodeBox.Text = $"DD000000 {keyCode:X8}";
-            Txt_KeyCodeBox.Tag = keyCode;
+            Txt_KeyCodeResultBox.Text = $"DD000000 {keyCode:X8}";
+            Txt_KeyCodeResultBox.Tag = keyCode;
         }
 
         /// <summary>
@@ -89,7 +91,7 @@ namespace KeyConverter.Forms
         /// </summary>
         private void CopyButton_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(Txt_KeyCodeBox.Text);
+            Clipboard.SetText(Txt_KeyCodeResultBox.Text);
         }
 
         /// <summary>
@@ -97,12 +99,13 @@ namespace KeyConverter.Forms
         /// </summary>
         private void ResetButton_Click(object sender, EventArgs e)
         {
-            for (int i = 1; i <= KEY_CHEAK_BOX_LENGTH; i++) {
+            for (int i = 1; i <= KEY_CHEAK_BOX_LENGTH; i++)
+            {
                 CheckBox keyCheckBox = (CheckBox)TabPage1.Controls[$"KeyCheckBox{i}"];
                 keyCheckBox.Checked = false;
             }
-            Txt_KeyCodeBox.Text = "DD000000 00000000";
-            Txt_KeyCodeBox.Tag = 0;
+            Txt_KeyCodeResultBox.Text = "DD000000 00000000";
+            Txt_KeyCodeResultBox.Tag = 0;
         }
 
         /// <summary>
@@ -110,7 +113,7 @@ namespace KeyConverter.Forms
         /// </summary>
         private void KeyText_Re_TextChanged(object sender, EventArgs e)
         {
-            Btn_Convert_Re.Enabled = Txt_Key_Re.Text != "";
+            Btn_Re_Convert.Enabled = Txt_Re_KeyCodeBox.Text != "";
         }
 
         /// <summary>
@@ -119,18 +122,19 @@ namespace KeyConverter.Forms
         private void ConvertButton_Re_Click(object sender, EventArgs e)
         {
             // 正しいキーの値か確認
-            if (!StringExtensions.IsHexString(Txt_Key_Re.Text))
+            if (!StringExtensions.IsHexString(Txt_Re_KeyCodeBox.Text))
             {
                 MessageBox.Show(Resources.EnterHexNumber, Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            int keyValue = Convert.ToInt32(Txt_Key_Re.Text, 16);
+            int keyValue = Convert.ToInt32(Txt_Re_KeyCodeBox.Text, 16);
             string keyText = "";
 
             for (int bit = 0; bit < KEY_CHEAK_BOX_LENGTH; bit++)
             {
                 // 指定されたキーを確認
-                if (Convert.ToBoolean(keyValue & 1)) {
+                if (Convert.ToBoolean(keyValue & 1))
+                {
                     CheckBox keyCheckBox = (CheckBox)TabPage1.Controls[$"KeyCheckBox{bit + 1}"];
                     keyText += $"({keyCheckBox.Text}) + ";
                 }
@@ -154,8 +158,9 @@ namespace KeyConverter.Forms
             }
 
             // 結果を出力
-            if (keyText != "") {
-                Txt_OutputKey_Re.Text = keyText.Remove(keyText.Length - 3);
+            if (keyText != "")
+            {
+                Txt_Re_OutputKey.Text = keyText.Remove(keyText.Length - 3);
             }
         }
 
@@ -164,8 +169,34 @@ namespace KeyConverter.Forms
         /// </summary>
         private void ResetButton_Re_Click(object sender, EventArgs e)
         {
-            Txt_Key_Re.Text = "00000000";
-            Txt_OutputKey_Re.Text = "";
+            Txt_Re_KeyCodeBox.Text = "00000000";
+            Txt_Re_OutputKey.Text = "";
+        }
+
+        /// <summary>
+        /// TextBoxのキー入力イベントハンドラ。入力制限を行います。
+        /// バックスペースまたはDeleteキーは許可し、数字 0～9 および文字 A～F、a～f のみを許可します。
+        /// </summary>
+        /// <param name="sender">イベントを発生させたオブジェクト。</param>
+        /// <param name="e">KeyPressイベントのデータ。</param>
+        private void Txt_Re_KeyCodeBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // バックスペースまたはDeleteキーが押された場合は処理をスキップ
+            if (e.KeyChar == '\b')
+            {
+                return;
+            }
+
+            // 入力が数字 0～9 または文字 A～F または a～f の範囲内でない場合、イベントをキャンセル
+            bool isValidInput =
+                (e.KeyChar >= '0' && e.KeyChar <= '9') ||
+                (e.KeyChar >= 'A' && e.KeyChar <= 'F') ||
+                (e.KeyChar >= 'a' && e.KeyChar <= 'f');
+
+            if (!isValidInput)
+            {
+                e.Handled = true; // イベントの処理をキャンセルする
+            }
         }
     }
 }
