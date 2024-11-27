@@ -62,14 +62,6 @@ namespace KeyConverter.Forms
         }
 
         /// <summary>
-        /// ツールの終了処理
-        /// </summary>
-        private void Tsmi_Exit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        /// <summary>
         /// キーラベルと連動してキーコード生成
         /// </summary>
         private void KeyCheckBoxs_Cheaked(object sender, EventArgs e)
