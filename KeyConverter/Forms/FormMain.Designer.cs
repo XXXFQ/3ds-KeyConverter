@@ -66,8 +66,6 @@ namespace KeyConverter.Forms
             this.label1 = new System.Windows.Forms.Label();
             this.Txt_Re_KeyCodeBox = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.Tsmi_File = new System.Windows.Forms.ToolStripMenuItem();
-            this.Tsmi_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.Tsmi_Help = new System.Windows.Forms.ToolStripMenuItem();
             this.Tsmi_Version = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
@@ -84,7 +82,7 @@ namespace KeyConverter.Forms
             this.tabControl1.Controls.Add(this.TabPage1);
             this.tabControl1.Controls.Add(this.TabPage2);
             this.tabControl1.Location = new System.Drawing.Point(16, 34);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(477, 424);
@@ -121,9 +119,9 @@ namespace KeyConverter.Forms
             this.TabPage1.Controls.Add(this.Txt_KeyCodeResultBox);
             this.TabPage1.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.TabPage1.Location = new System.Drawing.Point(4, 25);
-            this.TabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.TabPage1.Name = "TabPage1";
-            this.TabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.TabPage1.Size = new System.Drawing.Size(469, 395);
             this.TabPage1.TabIndex = 0;
             this.TabPage1.Text = "変換";
@@ -132,7 +130,7 @@ namespace KeyConverter.Forms
             // 
             this.Btn_Reset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Reset.Location = new System.Drawing.Point(247, 55);
-            this.Btn_Reset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_Reset.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_Reset.Name = "Btn_Reset";
             this.Btn_Reset.Size = new System.Drawing.Size(85, 31);
             this.Btn_Reset.TabIndex = 26;
@@ -143,7 +141,7 @@ namespace KeyConverter.Forms
             // Btn_Copy
             // 
             this.Btn_Copy.Location = new System.Drawing.Point(132, 55);
-            this.Btn_Copy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_Copy.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_Copy.Name = "Btn_Copy";
             this.Btn_Copy.Size = new System.Drawing.Size(85, 31);
             this.Btn_Copy.TabIndex = 25;
@@ -158,7 +156,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox19.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
             this.KeyCheckBox19.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox19.Location = new System.Drawing.Point(301, 181);
-            this.KeyCheckBox19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox19.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox19.Name = "KeyCheckBox19";
             this.KeyCheckBox19.Size = new System.Drawing.Size(47, 40);
             this.KeyCheckBox19.TabIndex = 24;
@@ -172,7 +170,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox17.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.KeyCheckBox17.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox17.Location = new System.Drawing.Point(246, 157);
-            this.KeyCheckBox17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox17.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox17.Name = "KeyCheckBox17";
             this.KeyCheckBox17.Size = new System.Drawing.Size(65, 23);
             this.KeyCheckBox17.TabIndex = 23;
@@ -185,7 +183,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox16.AutoSize = true;
             this.KeyCheckBox16.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox16.Location = new System.Drawing.Point(339, 157);
-            this.KeyCheckBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox16.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox16.Name = "KeyCheckBox16";
             this.KeyCheckBox16.Size = new System.Drawing.Size(65, 23);
             this.KeyCheckBox16.TabIndex = 22;
@@ -199,7 +197,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox18.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.KeyCheckBox18.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox18.Location = new System.Drawing.Point(301, 112);
-            this.KeyCheckBox18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox18.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox18.Name = "KeyCheckBox18";
             this.KeyCheckBox18.Size = new System.Drawing.Size(47, 40);
             this.KeyCheckBox18.TabIndex = 21;
@@ -212,7 +210,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox10.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.KeyCheckBox10.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox10.Location = new System.Drawing.Point(77, 8);
-            this.KeyCheckBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox10.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox10.Name = "KeyCheckBox10";
             this.KeyCheckBox10.Size = new System.Drawing.Size(23, 40);
             this.KeyCheckBox10.TabIndex = 20;
@@ -226,7 +224,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox9.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.KeyCheckBox9.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox9.Location = new System.Drawing.Point(369, 8);
-            this.KeyCheckBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox9.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox9.Name = "KeyCheckBox9";
             this.KeyCheckBox9.Size = new System.Drawing.Size(23, 40);
             this.KeyCheckBox9.TabIndex = 19;
@@ -239,7 +237,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox13.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.KeyCheckBox13.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox13.Location = new System.Drawing.Point(13, 8);
-            this.KeyCheckBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox13.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox13.Name = "KeyCheckBox13";
             this.KeyCheckBox13.Size = new System.Drawing.Size(33, 40);
             this.KeyCheckBox13.TabIndex = 18;
@@ -253,7 +251,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox14.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.KeyCheckBox14.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox14.Location = new System.Drawing.Point(426, 8);
-            this.KeyCheckBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox14.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox14.Name = "KeyCheckBox14";
             this.KeyCheckBox14.Size = new System.Drawing.Size(33, 40);
             this.KeyCheckBox14.TabIndex = 17;
@@ -267,7 +265,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox15.AutoSize = true;
             this.KeyCheckBox15.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox15.Location = new System.Drawing.Point(168, 265);
-            this.KeyCheckBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox15.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox15.Name = "KeyCheckBox15";
             this.KeyCheckBox15.Size = new System.Drawing.Size(121, 23);
             this.KeyCheckBox15.TabIndex = 16;
@@ -280,7 +278,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox4.AutoSize = true;
             this.KeyCheckBox4.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox4.Location = new System.Drawing.Point(370, 328);
-            this.KeyCheckBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox4.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox4.Name = "KeyCheckBox4";
             this.KeyCheckBox4.Size = new System.Drawing.Size(62, 23);
             this.KeyCheckBox4.TabIndex = 15;
@@ -293,7 +291,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox3.AutoSize = true;
             this.KeyCheckBox3.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox3.Location = new System.Drawing.Point(371, 361);
-            this.KeyCheckBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox3.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox3.Name = "KeyCheckBox3";
             this.KeyCheckBox3.Size = new System.Drawing.Size(69, 23);
             this.KeyCheckBox3.TabIndex = 14;
@@ -307,7 +305,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox2.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
             this.KeyCheckBox2.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox2.Location = new System.Drawing.Point(392, 260);
-            this.KeyCheckBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox2.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox2.Name = "KeyCheckBox2";
             this.KeyCheckBox2.Size = new System.Drawing.Size(23, 40);
             this.KeyCheckBox2.TabIndex = 13;
@@ -321,7 +319,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox12.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.KeyCheckBox12.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox12.Location = new System.Drawing.Point(351, 236);
-            this.KeyCheckBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox12.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox12.Name = "KeyCheckBox12";
             this.KeyCheckBox12.Size = new System.Drawing.Size(41, 23);
             this.KeyCheckBox12.TabIndex = 12;
@@ -334,7 +332,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox1.AutoSize = true;
             this.KeyCheckBox1.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox1.Location = new System.Drawing.Point(417, 236);
-            this.KeyCheckBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox1.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox1.Name = "KeyCheckBox1";
             this.KeyCheckBox1.Size = new System.Drawing.Size(42, 23);
             this.KeyCheckBox1.TabIndex = 11;
@@ -348,7 +346,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox11.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.KeyCheckBox11.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox11.Location = new System.Drawing.Point(392, 192);
-            this.KeyCheckBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox11.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox11.Name = "KeyCheckBox11";
             this.KeyCheckBox11.Size = new System.Drawing.Size(23, 40);
             this.KeyCheckBox11.TabIndex = 10;
@@ -361,7 +359,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox8.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
             this.KeyCheckBox8.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox8.Location = new System.Drawing.Point(59, 326);
-            this.KeyCheckBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox8.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox8.Name = "KeyCheckBox8";
             this.KeyCheckBox8.Size = new System.Drawing.Size(41, 40);
             this.KeyCheckBox8.TabIndex = 9;
@@ -374,7 +372,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox6.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.KeyCheckBox6.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox6.Location = new System.Drawing.Point(1, 299);
-            this.KeyCheckBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox6.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox6.Name = "KeyCheckBox6";
             this.KeyCheckBox6.Size = new System.Drawing.Size(59, 23);
             this.KeyCheckBox6.TabIndex = 8;
@@ -386,7 +384,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox5.AutoSize = true;
             this.KeyCheckBox5.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox5.Location = new System.Drawing.Point(93, 299);
-            this.KeyCheckBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox5.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox5.Name = "KeyCheckBox5";
             this.KeyCheckBox5.Size = new System.Drawing.Size(59, 23);
             this.KeyCheckBox5.TabIndex = 7;
@@ -399,7 +397,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox7.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.KeyCheckBox7.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox7.Location = new System.Drawing.Point(59, 254);
-            this.KeyCheckBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox7.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox7.Name = "KeyCheckBox7";
             this.KeyCheckBox7.Size = new System.Drawing.Size(41, 40);
             this.KeyCheckBox7.TabIndex = 6;
@@ -412,7 +410,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox23.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
             this.KeyCheckBox23.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox23.Location = new System.Drawing.Point(60, 190);
-            this.KeyCheckBox23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox23.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox23.Name = "KeyCheckBox23";
             this.KeyCheckBox23.Size = new System.Drawing.Size(39, 40);
             this.KeyCheckBox23.TabIndex = 5;
@@ -425,7 +423,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox21.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.KeyCheckBox21.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox21.Location = new System.Drawing.Point(3, 166);
-            this.KeyCheckBox21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox21.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox21.Name = "KeyCheckBox21";
             this.KeyCheckBox21.Size = new System.Drawing.Size(57, 23);
             this.KeyCheckBox21.TabIndex = 4;
@@ -437,7 +435,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox20.AutoSize = true;
             this.KeyCheckBox20.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox20.Location = new System.Drawing.Point(96, 166);
-            this.KeyCheckBox20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox20.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox20.Name = "KeyCheckBox20";
             this.KeyCheckBox20.Size = new System.Drawing.Size(57, 23);
             this.KeyCheckBox20.TabIndex = 3;
@@ -450,7 +448,7 @@ namespace KeyConverter.Forms
             this.KeyCheckBox22.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.KeyCheckBox22.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.KeyCheckBox22.Location = new System.Drawing.Point(60, 121);
-            this.KeyCheckBox22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyCheckBox22.Margin = new System.Windows.Forms.Padding(4);
             this.KeyCheckBox22.Name = "KeyCheckBox22";
             this.KeyCheckBox22.Size = new System.Drawing.Size(39, 40);
             this.KeyCheckBox22.TabIndex = 2;
@@ -463,7 +461,7 @@ namespace KeyConverter.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_KeyCodeResultBox.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Txt_KeyCodeResultBox.Location = new System.Drawing.Point(132, 14);
-            this.Txt_KeyCodeResultBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_KeyCodeResultBox.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_KeyCodeResultBox.Name = "Txt_KeyCodeResultBox";
             this.Txt_KeyCodeResultBox.ReadOnly = true;
             this.Txt_KeyCodeResultBox.Size = new System.Drawing.Size(199, 32);
@@ -481,9 +479,9 @@ namespace KeyConverter.Forms
             this.TabPage2.Controls.Add(this.label1);
             this.TabPage2.Controls.Add(this.Txt_Re_KeyCodeBox);
             this.TabPage2.Location = new System.Drawing.Point(4, 25);
-            this.TabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.TabPage2.Name = "TabPage2";
-            this.TabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.TabPage2.Size = new System.Drawing.Size(469, 395);
             this.TabPage2.TabIndex = 1;
             this.TabPage2.Text = "逆変換";
@@ -503,7 +501,7 @@ namespace KeyConverter.Forms
             // 
             this.Txt_Re_OutputKey.Font = new System.Drawing.Font("游明朝", 15F);
             this.Txt_Re_OutputKey.Location = new System.Drawing.Point(8, 155);
-            this.Txt_Re_OutputKey.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_Re_OutputKey.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_Re_OutputKey.Multiline = true;
             this.Txt_Re_OutputKey.Name = "Txt_Re_OutputKey";
             this.Txt_Re_OutputKey.ReadOnly = true;
@@ -514,7 +512,7 @@ namespace KeyConverter.Forms
             // 
             this.Btn_Re_Reset.Font = new System.Drawing.Font("游明朝", 9F);
             this.Btn_Re_Reset.Location = new System.Drawing.Point(247, 55);
-            this.Btn_Re_Reset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_Re_Reset.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_Re_Reset.Name = "Btn_Re_Reset";
             this.Btn_Re_Reset.Size = new System.Drawing.Size(85, 31);
             this.Btn_Re_Reset.TabIndex = 28;
@@ -526,7 +524,7 @@ namespace KeyConverter.Forms
             // 
             this.Btn_Re_Convert.Font = new System.Drawing.Font("游明朝", 9F);
             this.Btn_Re_Convert.Location = new System.Drawing.Point(132, 55);
-            this.Btn_Re_Convert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_Re_Convert.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_Re_Convert.Name = "Btn_Re_Convert";
             this.Btn_Re_Convert.Size = new System.Drawing.Size(85, 31);
             this.Btn_Re_Convert.TabIndex = 27;
@@ -549,7 +547,7 @@ namespace KeyConverter.Forms
             // 
             this.Txt_Re_KeyCodeBox.Font = new System.Drawing.Font("游明朝", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Txt_Re_KeyCodeBox.Location = new System.Drawing.Point(217, 14);
-            this.Txt_Re_KeyCodeBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_Re_KeyCodeBox.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_Re_KeyCodeBox.MaxLength = 8;
             this.Txt_Re_KeyCodeBox.Name = "Txt_Re_KeyCodeBox";
             this.Txt_Re_KeyCodeBox.Size = new System.Drawing.Size(95, 32);
@@ -563,32 +561,12 @@ namespace KeyConverter.Forms
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Tsmi_File,
             this.Tsmi_Help});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(509, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // Tsmi_File
-            // 
-            this.Tsmi_File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Tsmi_Exit});
-            this.Tsmi_File.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
-            this.Tsmi_File.Name = "Tsmi_File";
-            this.Tsmi_File.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F)));
-            this.Tsmi_File.Size = new System.Drawing.Size(82, 24);
-            this.Tsmi_File.Text = "ファイル(&F)";
-            // 
-            // Tsmi_Exit
-            // 
-            this.Tsmi_Exit.Name = "Tsmi_Exit";
-            this.Tsmi_Exit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.Tsmi_Exit.ShowShortcutKeys = false;
-            this.Tsmi_Exit.Size = new System.Drawing.Size(132, 26);
-            this.Tsmi_Exit.Text = "終了(&X)";
-            this.Tsmi_Exit.Click += new System.EventHandler(this.Tsmi_Exit_Click);
             // 
             // Tsmi_Help
             // 
@@ -604,7 +582,7 @@ namespace KeyConverter.Forms
             this.Tsmi_Version.Name = "Tsmi_Version";
             this.Tsmi_Version.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.Tsmi_Version.ShowShortcutKeys = false;
-            this.Tsmi_Version.Size = new System.Drawing.Size(196, 26);
+            this.Tsmi_Version.Size = new System.Drawing.Size(224, 26);
             this.Tsmi_Version.Text = "バージョン情報(&A)...";
             this.Tsmi_Version.Click += new System.EventHandler(this.Tsmi_Version_Click);
             // 
@@ -618,7 +596,7 @@ namespace KeyConverter.Forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(525, 506);
             this.Name = "FormMain";
@@ -674,8 +652,6 @@ namespace KeyConverter.Forms
         private System.Windows.Forms.TextBox Txt_Re_OutputKey;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem Tsmi_File;
-        private System.Windows.Forms.ToolStripMenuItem Tsmi_Exit;
         private System.Windows.Forms.ToolStripMenuItem Tsmi_Help;
         private System.Windows.Forms.ToolStripMenuItem Tsmi_Version;
     }
